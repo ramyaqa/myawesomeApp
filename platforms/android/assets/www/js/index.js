@@ -20,6 +20,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        console.log('binding');
+        
     },
     // Bind Event Listeners
     //
@@ -27,13 +29,23 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener("online", this.onOnline, false);
+        document.addEventListener("offline", this.onOffline, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        console.log('device ready');
         app.receivedEvent('deviceready');
+        this.initializeMap();
+    },
+    onOnline: function() {
+        console.log('Received Event onOnline');
+    },
+    onOffline: function() {
+        console.log('Received Event onOffline');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -45,5 +57,14 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    initializeMap: function () { 
+        var mapOptions = {
+            center: new google.maps.LatLng(43.069452, -89.411373),
+            zoom: 11,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        console.log('loading maps');
     }
 };
