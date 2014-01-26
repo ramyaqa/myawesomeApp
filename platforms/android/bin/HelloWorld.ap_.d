@@ -23,6 +23,7 @@
 /Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/lib \
 /Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/partials \
 /Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/phonegap.js \
+/Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/plugins \
 /Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/res \
 /Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/spec \
 /Users/arvind/Desktop/Arvind/Projects/phonegapAngular/myawesomeApp/platforms/android/assets/www/spec.html \

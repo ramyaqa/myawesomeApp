@@ -31,7 +31,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("online", this.onOnline, false);
         document.addEventListener("offline", this.onOffline, false);
-        this.initializeMap();
+       
     },
     // deviceready Event Handler
     //
@@ -60,10 +60,10 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-    initializeMap: function () { 
+    initializeMap: function (lat, lng) { 
         var mapOptions = {
-            center: new google.maps.LatLng(43.069452, -89.411373),
-            zoom: 11,
+            center: new google.maps.LatLng(lat, lng),
+            zoom: 4,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);

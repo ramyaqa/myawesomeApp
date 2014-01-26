@@ -20,7 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        console.log('binding');
+        console.log('bound events');
         
     },
     // Bind Event Listeners
@@ -31,6 +31,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("online", this.onOnline, false);
         document.addEventListener("offline", this.onOffline, false);
+        this.initializeMap();
     },
     // deviceready Event Handler
     //
@@ -39,7 +40,8 @@ var app = {
     onDeviceReady: function() {
         console.log('device ready');
         app.receivedEvent('deviceready');
-        this.initializeMap();
+        
+        
     },
     onOnline: function() {
         console.log('Received Event onOnline');

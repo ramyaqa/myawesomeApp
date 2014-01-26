@@ -7,6 +7,7 @@ angular.module('myawesomeApp.services', [])
                 };
 
             document.addEventListener('deviceready', function () {
+                console.log('device ready @service');
                 queue.forEach(function (args) {
                     fn.apply(this, args);
                 });
@@ -14,6 +15,7 @@ angular.module('myawesomeApp.services', [])
             }, false);
 
             return function () {
+                console.log('impl apply');
                 return impl.apply(this, arguments);
             };
         };
