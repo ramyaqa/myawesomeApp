@@ -1,5 +1,7 @@
 angular.module('myawesomeApp.services', [])
     .factory('cordovaReady', [function () {
+        console.log('at myawesomeApp.services');
+        
         return function (fn) {
             var queue = [],
                 impl = function () {
