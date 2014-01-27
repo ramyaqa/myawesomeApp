@@ -40,7 +40,7 @@ var app = {
     onDeviceReady: function() {
         console.log('device ready');
         app.receivedEvent('deviceready');
-        
+        this.initializeMap();
         
     },
     onOnline: function() {
